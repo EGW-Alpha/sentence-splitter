@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sentence split example</title>
+    <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css">
+</head>
+<body>
+<main class="container">
+    <form action="/sentence" method="post">
+        <hgroup>
+            <h2>Sentence splitter module</h2>
+            <h3> for WhiteEstate Document Management</h3>
+        </hgroup>
+        <p>API has single <code>/sentence</code> endpoint with following fields:</p>
+        <ul>
+            <li><code>text</code>: Text to split into sentences</li>
+            <li><code>with_text</code>: Include text of each sentence in result</li>
+        </ul>
+        <article>
+            <div>
+                <label for="text">
+                    Text to parse
+                    <textarea type="text" id="text" name="text" placeholder="Text to parse" required></textarea>
+                </label>
+            </div>
+            <div>
+                <div class="grid" style="align-items: center;">
+                    <label for="with_text">
+                        <input type="checkbox" id="with_text" name="with_text" role="switch" value="true" checked>
+                        Include sentence text
+                    </label>
+                    <button type="submit">Submit</button>
+                </div>
+            </div>
+        </article>
+    </form>
+</main>
+</body>
+</html>
