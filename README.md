@@ -2,10 +2,20 @@
 
 Sentence splitter service for White Estate Document API
 
+## Installation
+
+```sh
+$ pip install pipenv
+$ pipenv install
+$ pipenv run python -m spacy download en_core_web_lg
+$ pipenv run uvicorn main:app
+
+```
+
 ## How to run
 
 ```sh
-$ uvicorn main:app --port 8081 --host 0.0.0.0 --workers 4
+$ pipenv run uvicorn main:app --port 8081 --host 0.0.0.0 --workers 4
 ```
 
 ## How to run with docker

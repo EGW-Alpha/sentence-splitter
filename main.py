@@ -31,8 +31,8 @@ class Response(BaseModel):
 
 
 def extract_chunk(sent: Span, with_text: bool) -> Chunk:
-    begin = sent.start
-    end = sent.end
+    begin = sent.start_char
+    end = sent.end_char
     text = sent.text
 
     text_len = len(text)
